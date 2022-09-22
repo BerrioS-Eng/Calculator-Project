@@ -36,8 +36,8 @@ public class WindowCalculator extends javax.swing.JFrame {
         btnOcho = new javax.swing.JButton();
         btnNueve = new javax.swing.JButton();
         btnDividir = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
+        btnPrimo = new javax.swing.JButton();
+        btnFactorial = new javax.swing.JButton();
         btnSeis = new javax.swing.JButton();
         btnMultiplicar = new javax.swing.JButton();
         btnCuatro = new javax.swing.JButton();
@@ -46,8 +46,8 @@ public class WindowCalculator extends javax.swing.JFrame {
         btnDos = new javax.swing.JButton();
         btnTres = new javax.swing.JButton();
         btnRestar = new javax.swing.JButton();
-        jButton15 = new javax.swing.JButton();
-        jButton16 = new javax.swing.JButton();
+        btnPotencia = new javax.swing.JButton();
+        btnRadical = new javax.swing.JButton();
         btnSumar = new javax.swing.JButton();
         btnPunto = new javax.swing.JButton();
         btnCero = new javax.swing.JButton();
@@ -99,11 +99,21 @@ public class WindowCalculator extends javax.swing.JFrame {
             }
         });
 
-        jButton5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton5.setText("P");
+        btnPrimo.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnPrimo.setText("P");
+        btnPrimo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPrimoActionPerformed(evt);
+            }
+        });
 
-        jButton6.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton6.setText("n!");
+        btnFactorial.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnFactorial.setText("n!");
+        btnFactorial.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnFactorialActionPerformed(evt);
+            }
+        });
 
         btnSeis.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnSeis.setText("6");
@@ -169,11 +179,21 @@ public class WindowCalculator extends javax.swing.JFrame {
             }
         });
 
-        jButton15.setFont(new java.awt.Font("Segoe UI", 1, 8)); // NOI18N
-        jButton15.setText("x^n");
+        btnPotencia.setFont(new java.awt.Font("Segoe UI", 1, 8)); // NOI18N
+        btnPotencia.setText("x^n");
+        btnPotencia.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPotenciaActionPerformed(evt);
+            }
+        });
 
-        jButton16.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
-        jButton16.setText("√x");
+        btnRadical.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
+        btnRadical.setText("√x");
+        btnRadical.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRadicalActionPerformed(evt);
+            }
+        });
 
         btnSumar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnSumar.setText("+");
@@ -267,8 +287,8 @@ public class WindowCalculator extends javax.swing.JFrame {
                                 .addComponent(btnMultiplicar, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel1BotoneraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(btnFactorial, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnPrimo, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel1BotoneraLayout.createSequentialGroup()
                         .addGroup(jPanel1BotoneraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(btnUno, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
@@ -289,8 +309,8 @@ public class WindowCalculator extends javax.swing.JFrame {
                                 .addComponent(btnSumar, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel1BotoneraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton15, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton16, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(btnPotencia, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnRadical, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(28, Short.MAX_VALUE))
         );
         jPanel1BotoneraLayout.setVerticalGroup(
@@ -303,10 +323,10 @@ public class WindowCalculator extends javax.swing.JFrame {
                         .addComponent(btnOcho, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(btnNueve, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(btnDividir, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(btnPrimo, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1BotoneraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnFactorial, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnSeis, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnMultiplicar, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnCuatro, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -317,10 +337,10 @@ public class WindowCalculator extends javax.swing.JFrame {
                     .addComponent(btnDos, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnTres, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnRestar, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton15, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnPotencia, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1BotoneraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton16, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnRadical, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnSumar, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnPunto, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnCero, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -546,10 +566,73 @@ public class WindowCalculator extends javax.swing.JFrame {
         memoryModel.removeAllElements();    
     }//GEN-LAST:event_btnClearMemoryActionPerformed
 
+    private void btnPrimoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPrimoActionPerformed
+        if(verifyDisplay(txtDisplayAux.getText())){
+            capturarDatos();
+            operaciones();
+            String primo = numPrimo(resultado, 2) ? "Si" : "No";
+            txtDisplayAux.setText("Primo(" + 
+                                  Integer.toString(resultado) +
+                                  ") = " + primo);
+            txtDisplayMain.setText("");
+        } else {
+            int num = Integer.parseInt(txtDisplayMain.getText());
+            String primo = numPrimo(num, 2) ? "Si" : "No";
+            txtDisplayAux.setText("Primo(" + 
+                                  num +
+                                  ") = " + primo);
+            txtDisplayMain.setText("");
+        }
+    }//GEN-LAST:event_btnPrimoActionPerformed
+
+    private void btnFactorialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFactorialActionPerformed
+        if(verifyDisplay(txtDisplayAux.getText())){
+            capturarDatos();
+            operaciones();
+            txtDisplayAux.setText("Fact(" + 
+                                  Integer.toString(resultado) +
+                                  ") = " + numFactorial(resultado));
+            txtDisplayMain.setText("");
+        } else {
+            int num = Integer.parseInt(txtDisplayMain.getText());
+            txtDisplayAux.setText("Fact(" + 
+                                  num +
+                                  ") = " + numFactorial(num));
+            txtDisplayMain.setText("");
+        }
+    }//GEN-LAST:event_btnFactorialActionPerformed
+
+    private void btnPotenciaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPotenciaActionPerformed
+      if(verifyDisplay(txtDisplayAux.getText())){
+            capturarDatos();
+            operaciones();
+            txtDisplayAux.setText(Integer.toString(resultado) + " ^ ");
+            txtDisplayMain.setText("");
+        } else {
+            txtDisplayAux.setText(txtDisplayMain.getText() + " ^ ");
+            txtDisplayMain.setText("");
+        }  
+    }//GEN-LAST:event_btnPotenciaActionPerformed
+
+    private void btnRadicalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRadicalActionPerformed
+        if(verifyDisplay(txtDisplayAux.getText())){
+            capturarDatos();
+            operaciones();
+            txtDisplayAux.setText("√" + Integer.toString(resultado) + " = " + 
+                                    numRadical(resultado));
+            txtDisplayMain.setText("");
+        } else {
+            int num = Integer.parseInt(txtDisplayMain.getText());
+            txtDisplayAux.setText("√" + num + " = " + 
+                                    numRadical(num));
+            txtDisplayMain.setText("");
+        }
+    }//GEN-LAST:event_btnRadicalActionPerformed
+
     private boolean verifyDisplay(String displayContent){
         //displayContent es el contenido del displayAux el cual verifica
         //si hay un operador dentro la cadena
-        boolean regEx = displayContent.matches("-?[0-9]+ [+-x/] ");
+        boolean regEx = displayContent.matches("-?[0-9]+ [+-x/^] ");
         return regEx; 
     }
 
@@ -557,7 +640,7 @@ public class WindowCalculator extends javax.swing.JFrame {
         String displayContent = txtDisplayAux.getText()
                                             .replaceAll(" ", "");
         
-        if(txtDisplayAux.getText().matches("[0-9]+ [+-x/] ")){
+        if(txtDisplayAux.getText().matches("[0-9]+ [+-x/^] ")){
             numAux = Integer.parseInt(displayContent.
                                     substring(0, (displayContent.length()-1)));
         } else {
@@ -596,9 +679,36 @@ public class WindowCalculator extends javax.swing.JFrame {
                             "Error", 
                             0);
                 }
+            case '^':
+                resultado = (int) Math.pow((double) numAux,(double) numMain);
+                break;
             default:
                 break;
         }
+    }
+    
+    private boolean numPrimo(int num, int divisor){
+       if(num/2 < divisor){
+           return true;
+       } else {
+           if( num%divisor == 0){
+               return false; 
+           } else {
+               return numPrimo(num, divisor+1);
+           }
+       }
+    }
+    
+    private int numFactorial(int num){
+        if(num == 0){
+            return 1;
+        } else {
+            return num * numFactorial(num-1);
+        }
+    }
+    
+    private int numRadical(int num){
+        return (int) Math.sqrt(num);
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -610,22 +720,22 @@ public class WindowCalculator extends javax.swing.JFrame {
     private javax.swing.JButton btnCuatro;
     private javax.swing.JButton btnDividir;
     private javax.swing.JButton btnDos;
+    private javax.swing.JButton btnFactorial;
     private javax.swing.JButton btnIgual;
     private javax.swing.JButton btnMultiplicar;
     private javax.swing.JButton btnNegate;
     private javax.swing.JButton btnNueve;
     private javax.swing.JButton btnOcho;
+    private javax.swing.JButton btnPotencia;
+    private javax.swing.JButton btnPrimo;
     private javax.swing.JButton btnPunto;
+    private javax.swing.JButton btnRadical;
     private javax.swing.JButton btnRestar;
     private javax.swing.JButton btnSeis;
     private javax.swing.JButton btnSiete;
     private javax.swing.JButton btnSumar;
     private javax.swing.JButton btnTres;
     private javax.swing.JButton btnUno;
-    private javax.swing.JButton jButton15;
-    private javax.swing.JButton jButton16;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel1Botonera;

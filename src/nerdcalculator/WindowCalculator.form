@@ -97,8 +97,8 @@
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jButton6" min="-2" pref="50" max="-2" attributes="0"/>
-                              <Component id="jButton5" min="-2" pref="50" max="-2" attributes="0"/>
+                              <Component id="btnFactorial" min="-2" pref="50" max="-2" attributes="0"/>
+                              <Component id="btnPrimo" min="-2" pref="50" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
@@ -125,8 +125,8 @@
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jButton15" min="-2" pref="50" max="-2" attributes="0"/>
-                              <Component id="jButton16" min="-2" pref="50" max="-2" attributes="0"/>
+                              <Component id="btnPotencia" min="-2" pref="50" max="-2" attributes="0"/>
+                              <Component id="btnRadical" min="-2" pref="50" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
@@ -144,12 +144,12 @@
                           <Component id="btnOcho" alignment="3" min="-2" pref="43" max="-2" attributes="0"/>
                           <Component id="btnNueve" alignment="3" min="-2" pref="43" max="-2" attributes="0"/>
                           <Component id="btnDividir" alignment="3" min="-2" pref="43" max="-2" attributes="0"/>
-                          <Component id="jButton5" alignment="3" min="-2" pref="43" max="-2" attributes="0"/>
+                          <Component id="btnPrimo" alignment="3" min="-2" pref="43" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jButton6" alignment="3" min="-2" pref="43" max="-2" attributes="0"/>
+                      <Component id="btnFactorial" alignment="3" min="-2" pref="43" max="-2" attributes="0"/>
                       <Component id="btnSeis" alignment="3" min="-2" pref="43" max="-2" attributes="0"/>
                       <Component id="btnMultiplicar" alignment="3" min="-2" pref="43" max="-2" attributes="0"/>
                       <Component id="btnCuatro" alignment="3" min="-2" pref="43" max="-2" attributes="0"/>
@@ -161,11 +161,11 @@
                       <Component id="btnDos" alignment="3" min="-2" pref="43" max="-2" attributes="0"/>
                       <Component id="btnTres" alignment="3" min="-2" pref="43" max="-2" attributes="0"/>
                       <Component id="btnRestar" alignment="3" min="-2" pref="43" max="-2" attributes="0"/>
-                      <Component id="jButton15" alignment="3" min="-2" pref="43" max="-2" attributes="0"/>
+                      <Component id="btnPotencia" alignment="3" min="-2" pref="43" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jButton16" alignment="3" min="-2" pref="43" max="-2" attributes="0"/>
+                      <Component id="btnRadical" alignment="3" min="-2" pref="43" max="-2" attributes="0"/>
                       <Component id="btnSumar" alignment="3" min="-2" pref="43" max="-2" attributes="0"/>
                       <Component id="btnPunto" alignment="3" min="-2" pref="43" max="-2" attributes="0"/>
                       <Component id="btnCero" alignment="3" min="-2" pref="43" max="-2" attributes="0"/>
@@ -227,21 +227,27 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnDividirActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton5">
+        <Component class="javax.swing.JButton" name="btnPrimo">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="14" style="1"/>
             </Property>
             <Property name="text" type="java.lang.String" value="P"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnPrimoActionPerformed"/>
+          </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton6">
+        <Component class="javax.swing.JButton" name="btnFactorial">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="14" style="1"/>
             </Property>
             <Property name="text" type="java.lang.String" value="n!"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnFactorialActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btnSeis">
           <Properties>
@@ -331,21 +337,27 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnRestarActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton15">
+        <Component class="javax.swing.JButton" name="btnPotencia">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="8" style="1"/>
             </Property>
             <Property name="text" type="java.lang.String" value="x^n"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnPotenciaActionPerformed"/>
+          </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton16">
+        <Component class="javax.swing.JButton" name="btnRadical">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="10" style="1"/>
             </Property>
             <Property name="text" type="java.lang.String" value="&#x221a;x"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnRadicalActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btnSumar">
           <Properties>
